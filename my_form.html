@@ -1,0 +1,90 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <form id="form" action="mailto:bkavyasree586@gmail.com" method="get" enctype="text/plain">
+        <label for="id">
+            Enter Your Id:
+        </label>
+        <input type="text" name="id" id="id" required placeholder="N230307">
+        <label for="fname">First Name:</label>
+        <input id="fname" name="fname" required placeholder="Enter Your Name"
+         pattern="[a-z]"
+        title="Please Enter Only samll letters" >
+        <br><br>
+        <label for="age">Age:</label>
+        <input id="age" name="age" required placeholder="Age"
+                pattern="[0-9]{2,3}" title="Only Digits">
+                <br><br><br>
+        <label for="gender" >Skill:</label>
+        <br>
+        <input id="Html" type="radio" name="gen" required  value="html">
+        <label for="Html">Html</label>
+        <input id="Css" type="radio" name="gen" required  vale="cs">
+        <label for="Css">Css</label>
+        <input id="JavaScript" type="radio" name="gen" required  value="Js">
+        <label id="JavaScript">JavaScript</label>
+        <br><br>
+        <input type="submit">
+    </form>
+
+    <script>
+         const form=document.querySelector("#form");
+        
+        console.log("Hello")
+
+        form.addEventListener('submit',(event)=>{
+                const formd=event.target;
+            const formdata=new FormData(formd);
+                event.preventDefault();
+                 console.log("By form : ",formdata.get('fname'));
+                console.log("By fofrm: ",formdata.get('age'));
+                 console.log("By form :",formdata.get('gen'));
+
+                 const data={
+                    username:formdata.get('fname'),
+                    userage:formdata.get('age'),
+                    userskill:formdata.get('gen')
+                 }
+
+                 userid=formdata.get('id');
+                    localStorage.setItem(userid,JSON.stringify(data));
+                 const local=localStorage.getItem(userid);
+                 console.log(local);
+                 
+                 
+        })
+       
+        </script>
+</body>
+</html> -->
+
+
+
+ <label for="id">
+            Enter Your Id:
+        </label>
+        <input type="text" name="id" id="id" required placeholder="N230307">
+
+        <label for="fname">First Name:</label>
+        <input id="fname" name="fname" required placeholder="Enter Your Name"
+         pattern="[a-z]"
+        title="Please Enter Only samll letters" >
+
+
+        <br><br>
+        <label for="age">Age:</label>
+        <input id="age" name="age" required placeholder="Age"
+                pattern="[0-9]{2,3}" title="Only Digits">
+               
+        <p>Skill U Like Most:</p>
+        <div style="display:flex;align-items: center;justify-content: center;gap:0.1rem;"><label for="Html">Html</label>&nbsp&nbsp&nbsp&nbsp<input id="Html" type="radio" name="gen" required  value="html">
+      <label for="Css">Css</label>      <input id="Css" type="radio" name="gen" required  vale="cs">
+        <label id="JavaScript">JavaScript</label><input id="JavaScript" type="radio" name="gen" required  value="Js"></div>
+        <input type="submit">
+
